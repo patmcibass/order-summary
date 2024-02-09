@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+
+}
+
+svg, img {
+    width: 100%;
+}
+
+html{
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container {
+    width: 450px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--Very-pale-blue);
+}
+
+.img-container {
+    width: 100%;
+    height: 220px;
+    background: url(./images/illustration-hero.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    margin-top: 1rem;
+    padding: .3rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1rem;
+    padding: 0 1rem;
+    margin: 0rem 2rem; 
+}
+
+#description {
+    margin: -1.5rem 2rem 0 2rem;
+    padding: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.about-plan {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Very-pale-blue);
+    padding: 20px;
+    margin: -10px 5px 0px 5px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px var(--Pale-blue);
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.left  {
+    display: flex;
+    align-items: center;
+    justify-items: flex-start;
+    margin-left: -10px;
+}
+
+.plan-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .2rem;
+    align-items: start;
+    margin-left: 1.5rem;
+}
+
+.price {
+    align-self: flex-start;
+    position: relative;
+    left: -45px;
+    color: var(--Desaturated-blue);
+}
+
+.about-plan a {
+    color: var(--Dark-blue);
+}
+
+.payment {
+    width: 78%;
+    margin: 1.2rem 0 0 0;
+    padding: 15px 0;
+    background-color: var(--Bright-blue);
+    color: var(--Very-pale-blue);
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 1px 10px 30px var(--Desaturated-blue);
+}
+
+.cancel {
+    margin: 10px 10px 30px 10px;
+    text-decoration: none;
+    color: var(--Dark-blue);
+}
+
+@media (max-width: 375px) {
+
+   
+    body {
+        background: var(--Pale-blue);
+    }
+    
+    .img-container {
+        width: 100%;
+        height: 200px;
+        background-size: 100%;
+    }
+
+    .container {
+        width: 325px;
+        gap: 0px;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        margin: -10px 0 0 0;
+        padding: 0;
+    }
+
+    #description {
+        margin: .2rem .5rem;
+    }
+
+    .about-plan {
+        width: 80%;
+        height: 75px;
+        padding: 0;
+        margin-top: .75rem;
+    }
+
+    h2 {
+        font-size: .9rem;
+        margin: 0;
+    }
+
+    .left {
+        margin: 0;
+
+    }
+
+    .left svg {
+        width: 100%;
+    }
+
+    .plan-price {
+        width: 6rem;
+    }
+
+    .about-plan a {
+        margin-right: .75rem;
+        font-size: .75rem;
+    }
+
+    .payment {
+        width: 85%;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+}
